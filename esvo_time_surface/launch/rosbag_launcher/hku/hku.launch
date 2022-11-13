@@ -1,0 +1,16 @@
+<launch>
+  <!-- ROS BAG -->
+  <rosparam param="/use_sim_time">true</rosparam>
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/hkust_lab.bag -r 0.25 clock"> -->
+
+  <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/ESVIO/HKU_aggressive_translation_new.bag -s 20 -r 0.1 --clock">
+  </node>
+
+
+
+  <!-- Publish stereo camera calibration -->
+  <!-- <include file="$(find esvo_time_surface)/launch/rosbag_launcher/hkust/hkust_calib_info.launch" /> -->
+  <include file="$(find esvo_time_surface)/launch/rosbag_launcher/hku/hku_calib_info.launch" />
+</launch>

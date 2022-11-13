@@ -1,0 +1,46 @@
+<launch>
+  <!-- ROS BAG -->
+  <rosparam param="/use_sim_time">true</rosparam>
+
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/desk_fast/merged_bags/desk_fast1.synced.merged.bag -r 0.2 clock"> -->
+
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/robot_fast/merged_bags/robot_fast1.synced.merged.bag -r 0.2 clock"> -->
+
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/sofa_fast/merged_bags/sofa_fast1.synced.merged.bag -r 0.2 clock"> -->
+  
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/hdr_fast/merged_bags/hdr_fast1.synced.merged.bag -r 0.2 clock"> -->
+  
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/mountain_fast/merged_bags/mountain_fast1.synced.merged.bag -r 0.2 clock"> -->
+  
+  <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/mountain_normal/merged_bags/mountain_normal1.synced.merged.bag -r 0.2 --clock">
+  
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/sofa_normal/merged_bags/sofa_normal1.synced.merged.bag -r 0.2 clock"> -->
+  
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/desk_normal/merged_bags/desk_normal1.synced.merged.bag -r 0.2 clock"> -->
+
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/hdr_normal/merged_bags/hdr_normal1.synced.merged.bag -r 0.2 clock"> -->
+
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/corner_slow/merged_bags/corner_slow1.synced.merged.bag -r 0.2 clock"> -->
+  
+  <!-- <node pkg="rosbag" type="play" name="play" output="screen" required="true"
+    args="/home/cpy/Datasets/VECtor/robot_normal/merged_bags/robot_normal1.synced.merged.bag -r 0.2 clock"> -->
+
+  
+  </node>
+
+
+
+  <!-- Publish stereo camera calibration -->
+  <!-- <include file="$(find esvo_time_surface)/launch/rosbag_launcher/hkust/hkust_calib_info.launch" /> -->
+  <include file="$(find esvo_time_surface)/launch/rosbag_launcher/vector/vector_calib_info.launch" />
+</launch>

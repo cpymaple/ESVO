@@ -91,8 +91,8 @@ bool esvo_core::core::EventBM::match_an_event(
      x_rect(1) < 0 || x_rect(1) > camSysPtr_->cam_left_ptr_->height_ - 1)
     return false;
   // This is to avoid depth estimation happening in the mask area.
-  if(camSysPtr_->cam_left_ptr_->UndistortRectify_mask_(x_rect(1), x_rect(0)) <= 125)
-    return false;
+  // if(camSysPtr_->cam_left_ptr_->UndistortRectify_mask_(x_rect(1), x_rect(0)) <= 125)
+  //   return false;
   Eigen::Vector2i x1(std::floor(x_rect(0)), std::floor(x_rect(1)));
   Eigen::Vector2i x1_left_top;
   if(!isValidPatch(x1, x1_left_top))

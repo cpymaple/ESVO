@@ -93,14 +93,22 @@ int main(int argc, char* argv[])
   }
 
   const double frequency = 1000;
+  // const double frequency = 60;
 
   // process events
   std::vector<std::string> topics;
+  // topics.push_back(std::string("/record_new_events/davis_left"));
+  // topics.push_back(std::string("/record_new_events/davis_right"));
+  // topics.push_back(std::string("/prophesee/left/events"));
+  // topics.push_back(std::string("/prophesee/right/events"));
   topics.push_back(std::string("/davis_left/events"));
   topics.push_back(std::string("/davis_right/events"));
+  
   std::vector<std::string> topics_rename;
-  topics_rename.push_back(std::string("/davis/left/events"));
-  topics_rename.push_back(std::string("/davis/right/events"));
+  // topics_rename.push_back(std::string("/davis/left/events"));
+  // topics_rename.push_back(std::string("/davis/right/events"));
+  topics_rename.push_back(std::string("/davis_left/events"));
+  topics_rename.push_back(std::string("/davis_right/events"));
   for(size_t i = 0;i < topics.size(); i++)
   {
     rosbag::View view(bag_src, rosbag::TopicQuery(topics[i]));
